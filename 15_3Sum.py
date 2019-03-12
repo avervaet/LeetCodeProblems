@@ -6,14 +6,15 @@ class Solution:
         for i in range(0, n - 1):  
             left = i + 1; 
             right = n - 1; 
-            x = nums[i]; 
+            a = nums[i]; 
             while (left < right) : 
-                if (x + nums[left] + nums[right] == 0) : 
-
-                    results.append((x, nums[left], nums[right]))
+                b = nums[left]
+                c = nums[right]
+                if (a + b + c == 0):
+                    results.append((a, b, c))
                     left += 1; 
                     right -= 1; 
-                elif (x + nums[left] + nums[right] < 0): 
+                elif (a + b + c < 0): 
                     left += 1; 
                 else: 
                     right -= 1;
